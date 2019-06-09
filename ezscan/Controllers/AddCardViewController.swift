@@ -29,6 +29,7 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
         }
         takeAPictureButton.addTarget(self, action: #selector(takePic(_:)), for: .touchUpInside)
         saveButton.addTarget(self, action: #selector(savePic(_:)), for: .touchUpInside)
+        self.hideKeyboardWhenTappedAround() 
     }
     
     @objc func takePic(_: Any) {
