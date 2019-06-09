@@ -10,6 +10,7 @@
 		9F218C6422AC81390012D36C /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F218C6322AC81390012D36C /* AddCardViewController.swift */; };
 		9F218C6622AC91AD0012D36C /* ImageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F218C6522AC91AD0012D36C /* ImageDataManager.swift */; };
 		9F218C6C22ACB41C0012D36C /* ImageDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F218C6B22ACB41C0012D36C /* ImageDetect.swift */; };
+		9F218C7022AD076A0012D36C /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F218C6F22AD076A0012D36C /* BarcodeViewController.swift */; };
 		9FA4D09122AC69C700D49A5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4D09022AC69C700D49A5D /* AppDelegate.swift */; };
 		9FA4D09322AC69C700D49A5D /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4D09222AC69C700D49A5D /* MainPageViewController.swift */; };
 		9FA4D09622AC69C700D49A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA4D09422AC69C700D49A5D /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		9F218C6322AC81390012D36C /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
 		9F218C6522AC91AD0012D36C /* ImageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataManager.swift; sourceTree = "<group>"; };
 		9F218C6B22ACB41C0012D36C /* ImageDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetect.swift; sourceTree = "<group>"; };
+		9F218C6F22AD076A0012D36C /* BarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
 		9FA4D08D22AC69C700D49A5D /* ezscan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ezscan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA4D09022AC69C700D49A5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FA4D09222AC69C700D49A5D /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				9FA4D09022AC69C700D49A5D /* AppDelegate.swift */,
 				9FA4D09222AC69C700D49A5D /* MainPageViewController.swift */,
+				9F218C6F22AD076A0012D36C /* BarcodeViewController.swift */,
 				9FA4D0A522AC6B9F00D49A5D /* CardTableViewCell.swift */,
 				9FA4D09422AC69C700D49A5D /* Main.storyboard */,
 				9F218C6322AC81390012D36C /* AddCardViewController.swift */,
@@ -154,6 +157,7 @@
 				9FA4D09122AC69C700D49A5D /* AppDelegate.swift in Sources */,
 				9FA4D09922AC69C700D49A5D /* ezscan.xcdatamodeld in Sources */,
 				9FA4D0A622AC6B9F00D49A5D /* CardTableViewCell.swift in Sources */,
+				9F218C7022AD076A0012D36C /* BarcodeViewController.swift in Sources */,
 				9F218C6C22ACB41C0012D36C /* ImageDetect.swift in Sources */,
 				9F218C6422AC81390012D36C /* AddCardViewController.swift in Sources */,
 			);
@@ -302,14 +306,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36CNP65VL6;
+				DEVELOPMENT_TEAM = 9N643W5Q77;
 				INFOPLIST_FILE = ezscan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ezscan1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ezscan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -321,14 +325,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 36CNP65VL6;
+				DEVELOPMENT_TEAM = 9N643W5Q77;
 				INFOPLIST_FILE = ezscan/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.example.ezscan1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.ezscan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

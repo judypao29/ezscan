@@ -8,6 +8,7 @@
 import UIKit
 import Vision
 import AVFoundation
+import CoreData
 
 class AddCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, AVCaptureMetadataOutputObjectsDelegate {
 
@@ -17,14 +18,19 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
     @IBOutlet weak var nameOfCard: UITextField!
     
     let imageDataManager: ImageDataManager = ImageDataManager()
-    
+    let container = NSPersistentContainer(name: "ezscan")
+
     var imagePicker: UIImagePickerController!
     var scanner: Scanner?
     var found = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        container.loadPersistentStores { storeDescription, error in
+            if let error = error {
+                print("Unresolved error \(error)")
+            }
+        }
         takeAPictureButton.addTarget(self, action: #selector(takePic(_:)), for: .touchUpInside)
         saveButton.addTarget(self, action: #selector(savePic(_:)), for: .touchUpInside)
     }
@@ -35,7 +41,42 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
     
     @objc func savePic(_: Any) {
         if let imageToSave = cardPicture.image {
-            imageDataManager.storeImage(image: imageToSave, name: nameOfCard.text!)
+            if imageDataManager.storeImageInfo(image: imageToSave, name: nameOfCard.text!) {
+                let alert = UIAlertController(title: "Success!", message: "Your card has been saved", preferredStyle: .alert)
+                
+                let okAction = UIAlertAction(title: "OK", style: .default) {
+                    UIAlertAction in
+                }
+                
+                alert.addAction(okAction)
+                
+                self.present(alert, animated: true, completion: nil)
+            }
+            saveContext()
+            let _ = navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func saveContext() {
+        if container.viewContext.hasChanges {
+            do {
+                try container.viewContext.save()
+            } catch {
+                print("An error occurred while saving: \(error)")
+            }
+        }
+        
+        let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Image")
+        request.returnsObjectsAsFaults = false
+        do {
+            let result = try container.viewContext.fetch(request)
+            print("PRINTING DATA")
+            for data in result as! [NSManagedObject] {
+                print(data.value(forKey: "name") as! String)
+            }
+            
+        } catch {
+            print("Failed")
         }
     }
     
@@ -44,9 +85,6 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
 
         if let img = info[.originalImage] as? UIImage {
             parseImage(image: img)
-            if !found{
-                //want to display a text box that prompts them to try again
-            }
         }
     }
     
@@ -68,12 +106,15 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
                 print("Found")
                 self?.found = true
             case .notFound:
-                print("Not Found")
+                let alert = UIAlertController(title: "Error", message: "Please retake the photo", preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                
+                self?.present(alert, animated: true, completion: nil)
                 self?.found = false
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
-
     }
 }

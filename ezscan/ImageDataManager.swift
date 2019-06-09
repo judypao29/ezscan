@@ -12,7 +12,7 @@ import CoreData
 class ImageDataManager {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
-    func storeImage(image: UIImage, name: String) {
+    func storeImageInfo(image: UIImage, name: String) -> Bool {
         let context = appDelegate.persistentContainer.viewContext
         
         if let binaryImage = image.pngData() {
@@ -20,11 +20,14 @@ class ImageDataManager {
             imageToStore.setValue(binaryImage, forKey: "image")
             imageToStore.setValue(name, forKey: "name")
             
-            do {
-                try context.save()
-            } catch {
-                print("Failed saving")
+            if context.hasChanges {
+                do {
+                    try context.save()
+                } catch {
+                    print("failed to save")
+                }
             }
         }
+        return false
     }
 }

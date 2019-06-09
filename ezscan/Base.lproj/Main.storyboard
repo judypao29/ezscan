@@ -1,181 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QvF-KU-Frj">
-<device id="retina6_1" orientation="portrait">
-<adaptation id="fullscreen"/>
-</device>
-<dependencies>
-<deployment identifier="iOS"/>
-<plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
-<capability name="Safe area layout guides" minToolsVersion="9.0"/>
-<capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
-</dependencies>
-<scenes>
-<!--Main Page View Controller-->
-<scene sceneID="tne-QT-ifu">
-<objects>
-<viewController id="BYZ-38-t0r" customClass="MainPageViewController" customModule="ezscan" customModuleProvider="target" sceneMemberID="viewController">
-<view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-<rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-<subviews>
-<tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-FL-ipw">
-<rect key="frame" x="47" y="140" width="320" height="292"/>
-<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-<prototypes>
-<tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cardViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardViewCell" rowHeight="129" id="1uD-8Q-APo" customClass="CardTableViewCell" customModule="ezscan" customModuleProvider="target">
-<rect key="frame" x="0.0" y="28" width="320" height="129"/>
-<autoresizingMask key="autoresizingMask"/>
-<tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1uD-8Q-APo" id="SKC-Bk-eX5">
-<rect key="frame" x="0.0" y="0.0" width="320" height="128.5"/>
-<autoresizingMask key="autoresizingMask"/>
-<subviews>
-<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-CU-nQE">
-<rect key="frame" x="110" y="54" width="42" height="21"/>
-<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-<accessibility key="accessibilityConfiguration" identifier="cardName" label="cardName"/>
-<fontDescription key="fontDescription" type="system" pointSize="17"/>
-<nil key="textColor"/>
-<nil key="highlightedColor"/>
-</label>
-</subviews>
-</tableViewCellContentView>
-<color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-<accessibility key="accessibilityConfiguration" identifier="cardViewCell" label="cardViewCell">
-<bool key="isElement" value="YES"/>
-</accessibility>
-<connections>
-<outlet property="cardName" destination="4fj-CU-nQE" id="1xw-Va-pCX"/>
-<segue destination="iaJ-0z-U2R" kind="show" id="J3u-7O-X2M"/>
-</connections>
-</tableViewCell>
-</prototypes>
-</tableView>
-<button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-Bq-rpL">
-<rect key="frame" x="168" y="672" width="79" height="30"/>
-<state key="normal" title="Add A Card"/>
-<connections>
-<segue destination="swg-LL-Mur" kind="show" id="Okb-aP-Ijz"/>
-</connections>
-</button>
-</subviews>
-<color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-<constraints>
-<constraint firstItem="8ac-Bq-rpL" firstAttribute="top" secondItem="2qH-FL-ipw" secondAttribute="bottom" constant="212" id="40P-Sd-l2b"/>
-<constraint firstItem="2qH-FL-ipw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="PmO-Ab-nd0"/>
-<constraint firstItem="8ac-Bq-rpL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jfl-8I-I2O"/>
-<constraint firstItem="2qH-FL-ipw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="p9B-wB-Q00"/>
-<constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ac-Bq-rpL" secondAttribute="bottom" constant="188" id="wSR-2n-axf"/>
-</constraints>
-<viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-</view>
-<navigationItem key="navigationItem" id="5Su-6w-KAu"/>
-<connections>
-<outlet property="addCardButton" destination="8ac-Bq-rpL" id="bqT-Vv-1Ud"/>
-<outlet property="tableview" destination="2qH-FL-ipw" id="r2o-tp-a4n"/>
-</connections>
-</viewController>
-<placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-</objects>
-<point key="canvasLocation" x="965.21739130434787" y="26.116071428571427"/>
-</scene>
-<!--Add Card View Controller-->
-<scene sceneID="Ork-1r-PtN">
-<objects>
-<viewController id="swg-LL-Mur" customClass="AddCardViewController" customModule="ezscan" customModuleProvider="target" sceneMemberID="viewController">
-<view key="view" contentMode="scaleToFill" id="grL-XS-T45">
-<rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-<subviews>
-<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNW-3O-ORW">
-<rect key="frame" x="57" y="136" width="300" height="300"/>
-<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-<accessibility key="accessibilityConfiguration" identifier="cardImage" label="cardImage">
-<bool key="isElement" value="YES"/>
-</accessibility>
-</imageView>
-<button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTB-XC-ssz">
-<rect key="frame" x="158" y="479" width="98" height="30"/>
-<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-<state key="normal" title="Take A Picture"/>
-</button>
-<textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-8t-1pC">
-<rect key="frame" x="113" y="571" width="188" height="30"/>
-<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-<nil key="textColor"/>
-<fontDescription key="fontDescription" type="system" pointSize="14"/>
-<textInputTraits key="textInputTraits"/>
-</textField>
-<button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jv-IQ-b4G">
-<rect key="frame" x="174" y="681" width="66" height="35"/>
-<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-<accessibility key="accessibilityConfiguration" label="saveButton"/>
-<state key="normal" title="Save"/>
-</button>
-</subviews>
-<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-<viewLayoutGuide key="safeArea" id="kr7-z3-Qxl"/>
-</view>
-<connections>
-<outlet property="cardPicture" destination="aNW-3O-ORW" id="9L7-sx-8My"/>
-<outlet property="nameOfCard" destination="YqW-8t-1pC" id="YSP-VU-RGU"/>
-<outlet property="saveButton" destination="1jv-IQ-b4G" id="bk5-1D-scY"/>
-<outlet property="takeAPictureButton" destination="xTB-XC-ssz" id="HDm-CX-bpG"/>
-</connections>
-</viewController>
-<placeholder placeholderIdentifier="IBFirstResponder" id="g4f-lA-c7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
-</objects>
-<point key="canvasLocation" x="1784.057971014493" y="26.785714285714285"/>
-</scene>
-<!--View Controller-->
-<scene sceneID="JEe-Tu-i1d">
-<objects>
-<viewController id="iaJ-0z-U2R" sceneMemberID="viewController">
-<view key="view" contentMode="scaleToFill" id="xyh-UG-3r9">
-<rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-<autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-<subviews>
-<imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffK-El-PPT">
-<rect key="frame" x="87" y="516" width="240" height="128"/>
-<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-</imageView>
-<label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kXs-jD-Zvc">
-<rect key="frame" x="87" y="232" width="240" height="165"/>
-<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-<fontDescription key="fontDescription" type="system" pointSize="17"/>
-<nil key="textColor"/>
-<nil key="highlightedColor"/>
-</label>
-<button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zD-ob-VwS">
-<rect key="frame" x="33" y="60" width="55" height="30"/>
-<autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-<state key="normal" title="&lt;- Back"/>
-</button>
-</subviews>
-<color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-<viewLayoutGuide key="safeArea" id="rp9-tt-6Uj"/>
-</view>
-</viewController>
-<placeholder placeholderIdentifier="IBFirstResponder" id="XIt-dC-5cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-</objects>
-<point key="canvasLocation" x="965" y="828"/>
-</scene>
-<!--Navigation Controller-->
-<scene sceneID="geM-Bm-nFy">
-<objects>
-<navigationController automaticallyAdjustsScrollViewInsets="NO" id="QvF-KU-Frj" sceneMemberID="viewController">
-<toolbarItems/>
-<navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CQ4-o3-AMQ">
-<rect key="frame" x="0.0" y="44" width="414" height="44"/>
-<autoresizingMask key="autoresizingMask"/>
-</navigationBar>
-<nil name="viewControllers"/>
-<connections>
-<segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uiQ-Sh-2xo"/>
-</connections>
-</navigationController>
-<placeholder placeholderIdentifier="IBFirstResponder" id="EQo-iK-tP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
-</objects>
-<point key="canvasLocation" x="55.072463768115945" y="26.116071428571427"/>
-</scene>
-</scenes>
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Page View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainPageViewController" customModule="ezscan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-FL-ipw">
+                                <rect key="frame" x="20" y="108" width="374" height="484"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cardViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardViewCell" rowHeight="129" id="1uD-8Q-APo" userLabel="cardViewCell" customClass="CardTableViewCell" customModule="ezscan">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="129"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1uD-8Q-APo" id="SKC-Bk-eX5">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="128.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-CU-nQE">
+                                                    <rect key="frame" x="87" y="14" width="200" height="100"/>
+                                                    <accessibility key="accessibilityConfiguration" identifier="cardName" label="cardName"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.6003118762625016" green="0.8506584728011195" blue="0.29619995408171729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.60031187630000005" green="0.85065847279999995" blue="0.2961999541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="cardViewCell" label="cardViewCell">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="4fj-CU-nQE" secondAttribute="trailing" constant="222" id="6zW-gK-1tN"/>
+                                            <constraint firstAttribute="bottom" secondItem="4fj-CU-nQE" secondAttribute="bottom" constant="54" id="Hfb-L0-4bN"/>
+                                            <constraint firstItem="4fj-CU-nQE" firstAttribute="top" secondItem="1uD-8Q-APo" secondAttribute="top" constant="54" id="adL-V0-e2D"/>
+                                            <constraint firstItem="4fj-CU-nQE" firstAttribute="leading" secondItem="1uD-8Q-APo" secondAttribute="leading" constant="110" id="bfE-Ju-gOn"/>
+                                            <constraint firstItem="4fj-CU-nQE" firstAttribute="centerX" secondItem="1uD-8Q-APo" secondAttribute="centerX" id="nks-Pi-izK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cardName" destination="4fj-CU-nQE" id="1xw-Va-pCX"/>
+                                            <segue destination="iaJ-0z-U2R" kind="show" identifier="displayBarcode" id="J3u-7O-X2M"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-Bq-rpL">
+                                <rect key="frame" x="168" y="672" width="79" height="30"/>
+                                <state key="normal" title="Add A Card"/>
+                                <connections>
+                                    <segue destination="swg-LL-Mur" kind="show" id="Okb-aP-Ijz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="8ac-Bq-rpL" firstAttribute="top" secondItem="2qH-FL-ipw" secondAttribute="bottom" constant="40" id="40P-Sd-l2b"/>
+                            <constraint firstItem="2qH-FL-ipw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EH1-l1-CDj"/>
+                            <constraint firstItem="2qH-FL-ipw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PmO-Ab-nd0"/>
+                            <constraint firstItem="2qH-FL-ipw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cDN-mO-uSd"/>
+                            <constraint firstItem="8ac-Bq-rpL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jfl-8I-I2O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ac-Bq-rpL" secondAttribute="bottom" constant="200" id="wSR-2n-axf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5Su-6w-KAu"/>
+                    <connections>
+                        <outlet property="addCardButton" destination="8ac-Bq-rpL" id="bqT-Vv-1Ud"/>
+                        <outlet property="myTableView" destination="2qH-FL-ipw" id="SPD-Ve-PEA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965.21739130434787" y="26.116071428571427"/>
+        </scene>
+        <!--Add Card View Controller-->
+        <scene sceneID="Ork-1r-PtN">
+            <objects>
+                <viewController id="swg-LL-Mur" customClass="AddCardViewController" customModule="ezscan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="grL-XS-T45">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTB-XC-ssz">
+                                <rect key="frame" x="107" y="555" width="200" height="80"/>
+                                <color key="backgroundColor" red="0.60031187630000005" green="0.85065847279999995" blue="0.2961999541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Take A Picture"/>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of card" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-8t-1pC">
+                                <rect key="frame" x="100" y="128" width="214" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jv-IQ-b4G">
+                                <rect key="frame" x="157" y="708" width="100" height="80"/>
+                                <color key="backgroundColor" red="0.60031187630000005" green="0.85065847279999995" blue="0.2961999541" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="saveButton"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNW-3O-ORW">
+                                <rect key="frame" x="30" y="177" width="354" height="200"/>
+                                <accessibility key="accessibilityConfiguration" identifier="cardImage" label="cardImage">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1jv-IQ-b4G" firstAttribute="top" secondItem="xTB-XC-ssz" secondAttribute="bottom" constant="30" id="4mn-5A-Mdj"/>
+                            <constraint firstItem="YqW-8t-1pC" firstAttribute="top" secondItem="kr7-z3-Qxl" secondAttribute="top" constant="40" id="BjV-ew-Uoa"/>
+                            <constraint firstItem="xTB-XC-ssz" firstAttribute="centerX" secondItem="kr7-z3-Qxl" secondAttribute="centerX" id="D7u-wn-zV1"/>
+                            <constraint firstItem="aNW-3O-ORW" firstAttribute="leading" secondItem="kr7-z3-Qxl" secondAttribute="leading" constant="30" id="EEG-Td-BSI"/>
+                            <constraint firstItem="kr7-z3-Qxl" firstAttribute="bottom" secondItem="1jv-IQ-b4G" secondAttribute="bottom" constant="200" id="Ewp-IA-MJr"/>
+                            <constraint firstItem="aNW-3O-ORW" firstAttribute="centerX" secondItem="kr7-z3-Qxl" secondAttribute="centerX" id="GuF-J4-fiV"/>
+                            <constraint firstItem="xTB-XC-ssz" firstAttribute="top" secondItem="aNW-3O-ORW" secondAttribute="bottom" constant="40" id="VBw-gW-STM"/>
+                            <constraint firstItem="kr7-z3-Qxl" firstAttribute="trailing" secondItem="YqW-8t-1pC" secondAttribute="trailing" constant="100" id="Y5a-tX-RRs"/>
+                            <constraint firstItem="1jv-IQ-b4G" firstAttribute="centerX" secondItem="kr7-z3-Qxl" secondAttribute="centerX" id="e5h-NR-QO7"/>
+                            <constraint firstItem="YqW-8t-1pC" firstAttribute="leading" secondItem="kr7-z3-Qxl" secondAttribute="leading" constant="100" id="wag-uC-puc"/>
+                            <constraint firstItem="kr7-z3-Qxl" firstAttribute="trailing" secondItem="aNW-3O-ORW" secondAttribute="trailing" constant="30" id="xAz-cg-sod"/>
+                            <constraint firstItem="aNW-3O-ORW" firstAttribute="top" secondItem="YqW-8t-1pC" secondAttribute="bottom" constant="20" id="xQ6-SA-wmB"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kr7-z3-Qxl"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardPicture" destination="aNW-3O-ORW" id="9L7-sx-8My"/>
+                        <outlet property="nameOfCard" destination="YqW-8t-1pC" id="YSP-VU-RGU"/>
+                        <outlet property="saveButton" destination="1jv-IQ-b4G" id="bk5-1D-scY"/>
+                        <outlet property="takeAPictureButton" destination="xTB-XC-ssz" id="HDm-CX-bpG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4f-lA-c7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1784.057971014493" y="26.785714285714285"/>
+        </scene>
+        <!--Barcode View Controller-->
+        <scene sceneID="JEe-Tu-i1d">
+            <objects>
+                <viewController id="iaJ-0z-U2R" customClass="BarcodeViewController" customModule="ezscan" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xyh-UG-3r9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zD-ob-VwS">
+                                <rect key="frame" x="33" y="60" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="&lt;- Back"/>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffK-El-PPT">
+                                <rect key="frame" x="30" y="384" width="354" height="128"/>
+                                <accessibility key="accessibilityConfiguration" identifier="barcodeDisplay" label="barcodeDisplay"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ffK-El-PPT" firstAttribute="leading" secondItem="rp9-tt-6Uj" secondAttribute="leading" constant="30" id="1bF-iD-tav"/>
+                            <constraint firstItem="ffK-El-PPT" firstAttribute="centerY" secondItem="rp9-tt-6Uj" secondAttribute="centerY" id="RBW-HW-5BG"/>
+                            <constraint firstItem="ffK-El-PPT" firstAttribute="centerX" secondItem="rp9-tt-6Uj" secondAttribute="centerX" id="rHr-jW-2u8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rp9-tt-6Uj"/>
+                    </view>
+                    <connections>
+                        <outlet property="barcodeDisplay" destination="ffK-El-PPT" id="akZ-F6-mEC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XIt-dC-5cn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="965" y="828"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="geM-Bm-nFy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QvF-KU-Frj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CQ4-o3-AMQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uiQ-Sh-2xo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EQo-iK-tP9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="55.072463768115945" y="26.116071428571427"/>
+        </scene>
+    </scenes>
 </document>
