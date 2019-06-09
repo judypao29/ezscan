@@ -96,7 +96,7 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
                 self?.found = true
                 croppedImages.remove(at: 0)
             case .notFound:
-                let alert = UIAlertController(title: "Error", message: "Please retake the photo", preferredStyle: .alert)
+                let alert = UIAlertController(title: "Error", message: "Please move closer to the barcode.", preferredStyle: .alert)
                 
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 
