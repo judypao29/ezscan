@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9F218C6422AC81390012D36C /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F218C6322AC81390012D36C /* AddCardViewController.swift */; };
+		9F218C6622AC91AD0012D36C /* ImageDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F218C6522AC91AD0012D36C /* ImageDataManager.swift */; };
+		9F218C6C22ACB41C0012D36C /* ImageDetect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F218C6B22ACB41C0012D36C /* ImageDetect.swift */; };
 		9FA4D09122AC69C700D49A5D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4D09022AC69C700D49A5D /* AppDelegate.swift */; };
 		9FA4D09322AC69C700D49A5D /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FA4D09222AC69C700D49A5D /* MainPageViewController.swift */; };
 		9FA4D09622AC69C700D49A5D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FA4D09422AC69C700D49A5D /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		9F218C6322AC81390012D36C /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		9F218C6522AC91AD0012D36C /* ImageDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDataManager.swift; sourceTree = "<group>"; };
+		9F218C6B22ACB41C0012D36C /* ImageDetect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDetect.swift; sourceTree = "<group>"; };
 		9FA4D08D22AC69C700D49A5D /* ezscan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ezscan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FA4D09022AC69C700D49A5D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FA4D09222AC69C700D49A5D /* MainPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPageViewController.swift; sourceTree = "<group>"; };
@@ -65,10 +69,12 @@
 				9FA4D0A522AC6B9F00D49A5D /* CardTableViewCell.swift */,
 				9FA4D09422AC69C700D49A5D /* Main.storyboard */,
 				9F218C6322AC81390012D36C /* AddCardViewController.swift */,
+				9F218C6B22ACB41C0012D36C /* ImageDetect.swift */,
 				9FA4D09A22AC69C800D49A5D /* Assets.xcassets */,
 				9FA4D09C22AC69C800D49A5D /* LaunchScreen.storyboard */,
 				9FA4D09F22AC69C800D49A5D /* Info.plist */,
 				9FA4D09722AC69C700D49A5D /* ezscan.xcdatamodeld */,
+				9F218C6522AC91AD0012D36C /* ImageDataManager.swift */,
 			);
 			path = ezscan;
 			sourceTree = "<group>";
@@ -144,9 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FA4D09322AC69C700D49A5D /* MainPageViewController.swift in Sources */,
+				9F218C6622AC91AD0012D36C /* ImageDataManager.swift in Sources */,
 				9FA4D09122AC69C700D49A5D /* AppDelegate.swift in Sources */,
 				9FA4D09922AC69C700D49A5D /* ezscan.xcdatamodeld in Sources */,
 				9FA4D0A622AC6B9F00D49A5D /* CardTableViewCell.swift in Sources */,
+				9F218C6C22ACB41C0012D36C /* ImageDetect.swift in Sources */,
 				9F218C6422AC81390012D36C /* AddCardViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

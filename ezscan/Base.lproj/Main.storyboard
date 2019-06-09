@@ -27,7 +27,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-FL-ipw">
-                                <rect key="frame" x="0.0" y="109" width="320" height="331"/>
+                                <rect key="frame" x="61" y="114" width="320" height="331"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -92,12 +92,22 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take A Picture"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1jv-IQ-b4G">
+                                <rect key="frame" x="177" y="550" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" label="saveButton"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="duz-Gj-EbM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="kr7-z3-Qxl"/>
                     </view>
                     <connections>
                         <outlet property="cardPicture" destination="aNW-3O-ORW" id="9L7-sx-8My"/>
+                        <outlet property="saveButton" destination="1jv-IQ-b4G" id="bk5-1D-scY"/>
                         <outlet property="takeAPictureButton" destination="xTB-XC-ssz" id="HDm-CX-bpG"/>
                     </connections>
                 </viewController>
@@ -124,4 +134,8 @@
             <point key="canvasLocation" x="55.072463768115945" y="26.116071428571427"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Okb-aP-Ijz"/>
+        <segue reference="duz-Gj-EbM"/>
+    </inferredMetricsTieBreakers>
 </document>
