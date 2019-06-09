@@ -102,7 +102,7 @@
                                 <rect key="frame" x="19" y="483" width="376" height="152"/>
                                 <color key="backgroundColor" red="0.33333333329999998" green="0.66372095929999997" blue="0.1843137255" alpha="0.63484815139999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Take A Picture of the Barcode">
+                                <state key="normal" title="Take A Picture">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
