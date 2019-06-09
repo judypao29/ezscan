@@ -166,20 +166,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qei-HW-3nx">
-                                <rect key="frame" x="30" y="141" width="354" height="43"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qei-HW-3nx">
+                                <rect key="frame" x="164.5" y="118" width="85" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffK-El-PPT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ffK-El-PPT">
                                 <rect key="frame" x="82" y="398" width="250" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="barcodeDisplay" label="barcodeDisplay"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="Xej-ml-yoZ"/>
+                                    <constraint firstAttribute="height" constant="100" id="kcM-P8-bIE"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Qei-HW-3nx" firstAttribute="top" secondItem="rp9-tt-6Uj" secondAttribute="top" constant="30" id="8Z9-9t-2Pl"/>
+                            <constraint firstItem="ffK-El-PPT" firstAttribute="centerX" secondItem="xyh-UG-3r9" secondAttribute="centerX" id="S0M-RP-ydE"/>
+                            <constraint firstItem="ffK-El-PPT" firstAttribute="centerY" secondItem="xyh-UG-3r9" secondAttribute="centerY" id="XSG-fW-qbH"/>
+                            <constraint firstItem="Qei-HW-3nx" firstAttribute="centerX" secondItem="xyh-UG-3r9" secondAttribute="centerX" id="m0g-zP-Ovg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="rp9-tt-6Uj"/>
                     </view>
                     <connections>
