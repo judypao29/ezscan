@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddCardViewController: UIViewController, UIImagePickerControllerDelegate {
+class AddCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var cardPicture: UIImageView!
     @IBOutlet weak var takeAPictureButton: UIButton!
@@ -15,6 +15,7 @@ class AddCardViewController: UIViewController, UIImagePickerControllerDelegate {
     var imagePicker: UIImagePickerController!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         takeAPictureButton.addTarget(self, action: #selector(takePic(_:)), for: .touchUpInside)
     }
     
@@ -29,7 +30,7 @@ class AddCardViewController: UIViewController, UIImagePickerControllerDelegate {
     
     @IBAction func takePhoto(_ sender: Any){
         imagePicker = UIImagePickerController()
-        imagePicker.delegate = self as? UIImagePickerControllerDelegate & UINavigationControllerDelegate
+        imagePicker.delegate = self
         imagePicker.sourceType = .camera
         
         present(imagePicker, animated: true, completion: nil)
