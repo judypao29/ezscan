@@ -55,16 +55,9 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = myTableView.dequeueReusableCell(withIdentifier: "cardViewCell", for: indexPath) as! CardTableViewCell
-        
-        cell.backgroundColor = UIColor.yellow
-        cell.cardName.text = dataArray.value(forKey: "name") as? String
-        
+        let cell = myTableView.dequeueReusableCell(withIdentifier: "cardViewCell", for: indexPath)
+        cell.textLabel?.text = dataArray[indexPath.item]
         return cell
-        
-//        let cell = myTableView.dequeueReusableCell(withIdentifier: "cardViewCell", for: indexPath) as! CardTableViewCell
-//        cell.cardName.text = dataArray[indexPath.item]
-//        return cell
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
