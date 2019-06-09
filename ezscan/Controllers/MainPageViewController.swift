@@ -73,5 +73,20 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == .delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            dataArray.remove(at: indexPath.row)
+            imgArray.remove(at: indexPath.row)
+            myTableView.beginUpdates()
+            myTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.none)
+            myTableView.endUpdates()
+        }
+    }
+    
 }
 
