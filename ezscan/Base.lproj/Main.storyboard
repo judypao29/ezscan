@@ -19,14 +19,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableView" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2qH-FL-ipw">
-                                <rect key="frame" x="20" y="108" width="374" height="484"/>
+                                <rect key="frame" x="20" y="108" width="374" height="585"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cardViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardViewCell" rowHeight="129" id="1uD-8Q-APo" userLabel="cardViewCell" customClass="CardTableViewCell" customModule="ezscan">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cardViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cardViewCell" rowHeight="129" id="1uD-8Q-APo" userLabel="cardViewCell" customClass="CardTableViewCell" customModule="ezscan">
                                         <rect key="frame" x="0.0" y="28" width="374" height="129"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1uD-8Q-APo" id="SKC-Bk-eX5">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="128.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="336" height="128.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="4fj-CU-nQE">
@@ -58,7 +58,10 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ac-Bq-rpL">
-                                <rect key="frame" x="168" y="672" width="79" height="30"/>
+                                <rect key="frame" x="105" y="683" width="205" height="101"/>
+                                <color key="backgroundColor" red="0.33333333333333331" green="0.66372095933443809" blue="0.18431372549019609" alpha="0.63484815140845074" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Add A Card"/>
                                 <connections>
                                     <segue destination="swg-LL-Mur" kind="show" id="Okb-aP-Ijz"/>
@@ -70,9 +73,10 @@
                             <constraint firstItem="8ac-Bq-rpL" firstAttribute="top" secondItem="2qH-FL-ipw" secondAttribute="bottom" constant="40" id="40P-Sd-l2b"/>
                             <constraint firstItem="2qH-FL-ipw" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="EH1-l1-CDj"/>
                             <constraint firstItem="2qH-FL-ipw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="PmO-Ab-nd0"/>
+                            <constraint firstItem="8ac-Bq-rpL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="bZ2-aQ-U7x"/>
                             <constraint firstItem="2qH-FL-ipw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cDN-mO-uSd"/>
                             <constraint firstItem="8ac-Bq-rpL" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="jfl-8I-I2O"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ac-Bq-rpL" secondAttribute="bottom" constant="200" id="wSR-2n-axf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8ac-Bq-rpL" secondAttribute="bottom" constant="69" id="wSR-2n-axf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -156,15 +160,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8zD-ob-VwS">
-                                <rect key="frame" x="33" y="60" width="55" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="&lt;- Back"/>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffK-El-PPT">
                                 <rect key="frame" x="30" y="384" width="354" height="128"/>
                                 <accessibility key="accessibilityConfiguration" identifier="barcodeDisplay" label="barcodeDisplay"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qei-HW-3nx">
+                                <rect key="frame" x="178" y="207" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -176,6 +182,7 @@
                     </view>
                     <connections>
                         <outlet property="barcodeDisplay" destination="ffK-El-PPT" id="akZ-F6-mEC"/>
+                        <outlet property="cardName" destination="Qei-HW-3nx" id="4tm-vG-GOx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XIt-dC-5cn" userLabel="First Responder" sceneMemberID="firstResponder"/>

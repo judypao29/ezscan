@@ -15,6 +15,8 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var dataArray = [String]()
+    var imgArray = [UIImage]()
+    var selectedImage: UIImage?
 
     override func viewDidAppear(_ animated: Bool)
     {
@@ -27,11 +29,13 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         do
         {
             let result = try context.fetch(request)
+           // let match = results[i] as! NSManagedObject
             for data in result as! [NSManagedObject]
             {
                 dataArray.append(data.value(forKey: "name") as! String)
-//                let imgData = data as! Image
-//                dataArray.append(imgData.value(forKey: "name") as! String)
+                let pic = data.value(forKey: "image") as! NSData
+                imgArray.append(UIImage(data: pic as Data)!)
+              //  imgArray.append(data.value(forKey: "image") as! UIImage)
             }
         }
         catch
@@ -44,6 +48,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        addCardButton.layer.cornerRadius = 5
         myTableView.delegate = self
         myTableView.dataSource = self
         myTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cardViewCell")
@@ -63,5 +68,20 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "displayBarcode", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if  segue.identifier == "displayBarcode",
+            let destination = segue.destination as? BarcodeViewController,
+            let selectedIndex = myTableView.indexPathForSelectedRow?.row
+        {
+            destination.name = dataArray[selectedIndex]
+            destination.image = imgArray[selectedIndex]
+        }
+    }
+    
 }
 
