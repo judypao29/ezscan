@@ -19,7 +19,8 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
     let imageDataManager: ImageDataManager = ImageDataManager()
     
     var imagePicker: UIImagePickerController!
-    var scanner: Scanner? 
+    var scanner: Scanner?
+    var found = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,9 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
 
         if let img = info[.originalImage] as? UIImage {
             parseImage(image: img)
+            if !found{
+                //want to display a text box that prompts them to try again
+            }
         }
     }
     
@@ -55,17 +59,21 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
         
     }
     
-    func parseImage(image: UIImage) {
-        image.detector.crop(type: .barcode) { [weak self] result in
+    func parseImage(image: UIImage){
+        image.detector.crop(type: .barcode){ [weak self] result in
+            
             switch result {
             case .success(let croppedImages):
                 self?.cardPicture.image = croppedImages[0]
                 print("Found")
+                self?.found = true
             case .notFound:
                 print("Not Found")
+                self?.found = false
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
+
     }
 }
