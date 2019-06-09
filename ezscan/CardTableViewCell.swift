@@ -1,10 +1,3 @@
-//
-//  CardTableViewCell.swift
-//  ezscan
-//
-//  Created by Judy Pao on 6/8/19.
-//
-
 import UIKit
 
 class CardTableViewCell: UITableViewCell {

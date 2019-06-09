@@ -1,10 +1,3 @@
-//
-//  ViewController.swift
-//  ezscan
-//
-//  Created by Judy Pao on 6/8/19.
-//
-
 import UIKit
 import CoreData
 
@@ -29,20 +22,17 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
         do
         {
             let result = try context.fetch(request)
-           // let match = results[i] as! NSManagedObject
             for data in result as! [NSManagedObject]
             {
-                dataArray.append(data.value(forKey: "name") as! String)
                 let pic = data.value(forKey: "image") as! NSData
+                dataArray.append(data.value(forKey: "name") as! String)
                 imgArray.append(UIImage(data: pic as Data)!)
-              //  imgArray.append(data.value(forKey: "image") as! UIImage)
             }
         }
         catch
         {
             print("Failed")
         }
-        
         myTableView.reloadData()
     }
     
@@ -66,7 +56,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 90
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

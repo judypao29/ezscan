@@ -47,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F79B18722AD4BC7006C753D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9FA4D09222AC69C700D49A5D /* MainPageViewController.swift */,
+				9F218C6F22AD076A0012D36C /* BarcodeViewController.swift */,
+				9F218C6322AC81390012D36C /* AddCardViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		9FA4D08422AC69C700D49A5D = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +76,10 @@
 		9FA4D08F22AC69C700D49A5D /* ezscan */ = {
 			isa = PBXGroup;
 			children = (
+				9F79B18722AD4BC7006C753D /* Controllers */,
 				9FA4D09022AC69C700D49A5D /* AppDelegate.swift */,
-				9FA4D09222AC69C700D49A5D /* MainPageViewController.swift */,
-				9F218C6F22AD076A0012D36C /* BarcodeViewController.swift */,
 				9FA4D0A522AC6B9F00D49A5D /* CardTableViewCell.swift */,
 				9FA4D09422AC69C700D49A5D /* Main.storyboard */,
-				9F218C6322AC81390012D36C /* AddCardViewController.swift */,
 				9F218C6B22ACB41C0012D36C /* ImageDetect.swift */,
 				9FA4D09A22AC69C800D49A5D /* Assets.xcassets */,
 				9FA4D09C22AC69C800D49A5D /* LaunchScreen.storyboard */,

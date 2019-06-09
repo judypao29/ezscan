@@ -1,10 +1,3 @@
-//
-//  AddCardViewController.swift
-//  ezscan
-//
-//  Created by Judy Pao on 6/8/19.
-//
-
 import UIKit
 import Vision
 import AVFoundation
