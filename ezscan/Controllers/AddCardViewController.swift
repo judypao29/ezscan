@@ -4,7 +4,6 @@ import AVFoundation
 import CoreData
 
 class AddCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, AVCaptureMetadataOutputObjectsDelegate {
-
     @IBOutlet weak var cardPicture: UIImageView!
     @IBOutlet weak var takeAPictureButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
@@ -19,6 +18,7 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "New Card"
         container.loadPersistentStores { storeDescription, error in
             if let error = error {
                 print("Unresolved error \(error)")

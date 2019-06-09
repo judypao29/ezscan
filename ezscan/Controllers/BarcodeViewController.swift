@@ -10,6 +10,7 @@ class BarcodeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Scan Barcode"
         barcodeDisplay?.image = image
         cardName?.text = name
     }

@@ -38,6 +38,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "EZScan"
         addCardButton.layer.cornerRadius = 5
         myTableView.delegate = self
         myTableView.dataSource = self
@@ -79,9 +80,28 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == .delete) {
-            // handle delete (by removing the data from your array and updating the tableview)
             dataArray.remove(at: indexPath.row)
             imgArray.remove(at: indexPath.row)
+            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Image")
+            let managedContext = appDelegate.persistentContainer.viewContext
+            do {
+                let test = try managedContext.fetch(request)
+                let toDelete = test[indexPath.row] as! NSManagedObject
+                managedContext.delete(toDelete)
+                
+                do {
+                    try managedContext.save()
+                }
+                catch {
+                    print(error)
+                }
+            } catch {
+                print(error)
+            }
+//            managedContext.delete(dataArray[indexPath])
+//            managedContext.delete(imgArray[indexPath])
+            
+            
             myTableView.beginUpdates()
             myTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.none)
             myTableView.endUpdates()
