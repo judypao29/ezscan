@@ -131,6 +131,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="1jv-IQ-b4G" firstAttribute="top" secondItem="xTB-XC-ssz" secondAttribute="bottom" constant="30" id="4mn-5A-Mdj"/>
+                            <constraint firstItem="xTB-XC-ssz" firstAttribute="leading" secondItem="kr7-z3-Qxl" secondAttribute="leading" constant="60" id="Bfm-CC-tEv"/>
                             <constraint firstItem="YqW-8t-1pC" firstAttribute="top" secondItem="kr7-z3-Qxl" secondAttribute="top" constant="40" id="BjV-ew-Uoa"/>
                             <constraint firstItem="xTB-XC-ssz" firstAttribute="centerX" secondItem="kr7-z3-Qxl" secondAttribute="centerX" id="D7u-wn-zV1"/>
                             <constraint firstItem="aNW-3O-ORW" firstAttribute="leading" secondItem="kr7-z3-Qxl" secondAttribute="leading" constant="30" id="EEG-Td-BSI"/>
@@ -138,6 +139,7 @@
                             <constraint firstItem="aNW-3O-ORW" firstAttribute="centerX" secondItem="kr7-z3-Qxl" secondAttribute="centerX" id="GuF-J4-fiV"/>
                             <constraint firstItem="xTB-XC-ssz" firstAttribute="top" secondItem="aNW-3O-ORW" secondAttribute="bottom" constant="40" id="VBw-gW-STM"/>
                             <constraint firstItem="kr7-z3-Qxl" firstAttribute="trailing" secondItem="YqW-8t-1pC" secondAttribute="trailing" constant="100" id="Y5a-tX-RRs"/>
+                            <constraint firstItem="1jv-IQ-b4G" firstAttribute="leading" secondItem="kr7-z3-Qxl" secondAttribute="leading" constant="90" id="bc1-x9-8DB"/>
                             <constraint firstItem="1jv-IQ-b4G" firstAttribute="centerX" secondItem="kr7-z3-Qxl" secondAttribute="centerX" id="e5h-NR-QO7"/>
                             <constraint firstItem="YqW-8t-1pC" firstAttribute="leading" secondItem="kr7-z3-Qxl" secondAttribute="leading" constant="100" id="wag-uC-puc"/>
                             <constraint firstItem="kr7-z3-Qxl" firstAttribute="trailing" secondItem="aNW-3O-ORW" secondAttribute="trailing" constant="30" id="xAz-cg-sod"/>

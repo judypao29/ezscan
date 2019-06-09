@@ -1,6 +1,7 @@
 import UIKit
 import CoreData
 
+
 class MainPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var myTableView: UITableView!
@@ -14,6 +15,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidAppear(_ animated: Bool)
     {
         dataArray = [String]()
+        imgArray = [UIImage]()
         
         let context = appDelegate.persistentContainer.viewContext
         
@@ -88,6 +90,7 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
                 let test = try managedContext.fetch(request)
                 let toDelete = test[indexPath.row] as! NSManagedObject
                 managedContext.delete(toDelete)
+
                 
                 do {
                     try managedContext.save()
@@ -98,9 +101,6 @@ class MainPageViewController: UIViewController, UITableViewDelegate, UITableView
             } catch {
                 print(error)
             }
-//            managedContext.delete(dataArray[indexPath])
-//            managedContext.delete(imgArray[indexPath])
-            
             
             myTableView.beginUpdates()
             myTableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.none)

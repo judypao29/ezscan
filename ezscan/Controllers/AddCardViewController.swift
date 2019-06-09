@@ -15,9 +15,12 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
     var imagePicker: UIImagePickerController!
     var scanner: Scanner?
     var found = false
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        saveButton.layer.cornerRadius = 5
+        takeAPictureButton.layer.cornerRadius = 5
         self.navigationItem.title = "New Card"
         container.loadPersistentStores { storeDescription, error in
             if let error = error {
@@ -61,16 +64,6 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
         
         let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Image")
         request.returnsObjectsAsFaults = false
-        do {
-            let result = try container.viewContext.fetch(request)
-            print("PRINTING DATA")
-            for data in result as! [NSManagedObject] {
-                print(data.value(forKey: "name") as! String)
-            }
-            
-        } catch {
-            print("Failed")
-        }
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -94,10 +87,13 @@ class AddCardViewController: UIViewController, UINavigationControllerDelegate, U
         image.detector.crop(type: .barcode){ [weak self] result in
             
             switch result {
-            case .success(let croppedImages):
+            case .success(var croppedImages):
+                
                 self?.cardPicture.image = croppedImages[0]
+
                 print("Found")
                 self?.found = true
+                croppedImages.remove(at: 0)
             case .notFound:
                 let alert = UIAlertController(title: "Error", message: "Please retake the photo", preferredStyle: .alert)
                 
