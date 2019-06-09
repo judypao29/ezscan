@@ -100,7 +100,7 @@ public extension ImageDetect where T: CGImage {
         let x = object.boundingBox.origin.x * CGFloat(self.detectable.width)
         let y = (1 - object.boundingBox.origin.y) * CGFloat(self.detectable.height) - height
 
-        let croppingRect = CGRect(x: x, y: y, width: 800, height: height)
+        let croppingRect = CGRect(x: x - (height/5), y: y , width: 800, height: height)
         
 //        let croppingRect = CGRect(x: 10, y: 10, width: 200, height: 200)
 
